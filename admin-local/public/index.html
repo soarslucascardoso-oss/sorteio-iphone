@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel do Sorteio (local)</title>
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="panel narrow" autocomplete="on">
+    <h1>Painel do sorteio</h1>
+    <p class="muted">Acesso local e restrito.</p>
+    <label for="u">Usuário</label><input id="u" name="username" autocomplete="username" required>
+    <label for="p">Senha</label><input id="p" name="password" type="password" autocomplete="current-password" required>
+    <p id="loginErr" class="err" role="alert"></p>
+    <button class="btn primary" type="submit">Entrar</button>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header class="bar">
+    <strong>Painel do sorteio <span class="tag">LOCAL</span></strong>
+    <nav id="tabs" role="tablist">
+      <button data-tab="overview" class="on">Visão geral</button>
+      <button data-tab="people">Participantes</button>
+      <button data-tab="draw">Sorteio</button>
+      <button data-tab="settings">Configurações</button>
+      <button data-tab="audit">Histórico</button>
+    </nav>
+    <span class="grow"></span>
+    <span id="who" class="muted"></span>
+    <button id="logout" class="btn">Sair</button>
+  </header>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <main id="view" class="wrap"></main>
+</div>
+<script type="module" src="/admin/admin.js"></script>
+</body>
+</html>

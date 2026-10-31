@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sorteio de um iPhone 18 Pro Max</title>
+<meta name="description" content="Participe gratuitamente do sorteio de um iPhone 18 Pro Max. Informe nome completo e e-mail.">
+<meta name="theme-color" content="#0d0809">
+<link rel="preload" as="image" href="/img/iphone.webp" type="image/webp">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="top">
+  <div class="container">
+    <a class="brand" href="/"><i aria-hidden="true"></i> Sorteio</a>
+    <nav class="links" aria-label="Principal">
+      <a href="/regras">Regras</a>
+      <a href="/privacidade">Privacidade</a>
+      <a class="keep" href="/resultado">Resultado</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow reveal">Participação gratuita</span>
+        <h1 id="title" class="reveal d1">Sorteio de um iPhone 18 Pro Max</h1>
+        <p id="description" class="lead reveal d2">Participe gratuitamente do sorteio de um iPhone 18 Pro Max. Basta informar seu nome completo e e-mail.</p>
+        <div class="chips reveal d2">
+          <div class="chip"><small>Inscrições até</small><span id="endAt">…</span></div>
+          <div class="chip"><small>Resultado previsto</small><span id="resultAt">…</span></div>
+        </div>
+        <div class="reveal d3">
+          <button id="openForm" class="cta" type="button" disabled>PARTICIPAR DO SORTEIO</button>
+          <p id="stateNote" class="note" role="status"></p>
+        </div>
+      </div>
+      <div class="stage reveal d1">
+        <figure class="photo">
+          <picture>
+            <source srcset="/img/iphone.webp" type="image/webp">
+            <img src="/img/iphone.jpg" width="736" height="981" alt="iPhone na cor vinho sobre a caixa do aparelho, visto por trás" fetchpriority="high">
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="como">
+    <div class="container">
+      <h2>Como participar</h2>
+      <p class="sub">Sem cadastro de senha, sem login e sem custo.</p>
+      <div class="grid3">
+        <div class="card"><div class="n">1</div><h3>Clique em participar</h3><p>Use o botão destacado nesta página.</p></div>
+        <div class="card"><div class="n">2</div><h3>Informe seus dados</h3><p>Nome completo e um e-mail válido. Um cadastro por e-mail.</p></div>
+        <div class="card"><div class="n">3</div><h3>Aguarde o resultado</h3><p>O sorteio é feito por sistema, entre as inscrições válidas, e o resultado é divulgado nesta página.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="info">
+    <div class="container">
+      <h2>Informações do sorteio</h2>
+      <p class="sub">Leia o <a href="/regras">regulamento completo</a> antes de participar.</p>
+      <div class="facts">
+        <div class="card fact"><span>Prêmio</span><b data-bind="prizeName">iPhone 18 Pro Max</b></div>
+        <div class="card fact"><span>Período de participação</span><b><span data-bind="startAt">A definir</span> até <span data-bind="endAt">A definir</span></b></div>
+        <div class="card fact"><span>Resultado previsto</span><b data-bind="resultAt">A definir</b></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <nav aria-label="Rodapé"><a href="/regras">Regras</a><a href="/privacidade">Política de Privacidade</a><a href="/resultado">Resultado</a></nav>
+    <p>Sorteio promovido por <span data-bind="organizerName">[organizador a definir]</span>. Este sorteio não é patrocinado, endossado ou administrado pela Apple Inc. iPhone é marca registrada da Apple Inc.</p>
+  </div>
+</footer>
+
+<dialog id="signup" aria-labelledby="dlgTitle">
+  <div class="dlg">
+    <button class="close" type="button" id="closeDlg" aria-label="Fechar">×</button>
+    <div id="formView">
+      <h2 id="dlgTitle">Participar do sorteio</h2>
+      <p class="note">Gratuito. Leva menos de um minuto.</p>
+      <form id="form" novalidate autocomplete="on">
+        <label for="name">Nome completo</label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="nameErr">
+        <div class="field-err" id="nameErr" aria-live="polite"></div>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required aria-describedby="emailErr">
+        <div class="field-err" id="emailErr" aria-live="polite"></div>
+        <div class="hp" aria-hidden="true"><label for="website">Não preencha este campo</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="check" for="consent"><input id="consent" name="consent" type="checkbox" required aria-describedby="consentErr"><span>Li e concordo com o <a href="/regras" target="_blank" rel="noopener">regulamento</a> e com a <a href="/privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+        <div class="field-err" id="consentErr" aria-live="polite"></div>
+        <div id="turnstile"></div>
+        <div id="formAlert" class="alert err" role="alert" hidden></div>
+        <p></p>
+        <button id="submit" class="cta" type="submit">PARTICIPAR DO SORTEIO</button>
+      </form>
+    </div>
+    <div id="doneView" class="success" hidden>
+      <div class="tick" aria-hidden="true">✓</div>
+      <h2>Tudo certo!</h2>
+      <p id="doneMsg" role="status"></p>
+      <div class="num">Nº da inscrição: <b id="doneNum"></b></div>
+      <p class="note">Guarde este número. Resultado previsto: <span data-bind="resultAt"></span>.</p>
+    </div>
+  </div>
+</dialog>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

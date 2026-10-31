@@ -1,0 +1,24 @@
+# Blueprint do Render: publica SOMENTE o site público + API de inscrições (pasta public-app).
+# O painel administrativo (pasta admin-local) NÃO é implantado.
+services:
+  - type: web
+    name: sorteio-publico
+    runtime: node
+    plan: free            # o plano gratuito "hiberna" após inatividade; use um plano pago para resposta imediata
+    rootDir: public-app
+    buildCommand: npm ci
+    startCommand: npm start   # aplica as migrações automaticamente ao iniciar
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DATABASE_URL
+        sync: false           # cole a string de conexão do Postgres (Neon/Supabase/Render)
+      - key: FORM_SECRET
+        generateValue: true
+      - key: ADMIN_API_KEY_SHA256
+        sync: false           # hash gerado por `npm run setup` em admin-local

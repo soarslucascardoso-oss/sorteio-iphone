@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0809">
+<title>Sorteio</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="Resultado">
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="top"><div class="container"><a class="brand" href="/"><i aria-hidden="true"></i> Sorteio</a>
+<nav class="links" aria-label="Principal"><a href="/regras">Regras</a><a href="/privacidade">Privacidade</a><a class="keep" href="/resultado">Resultado</a></nav></div></header>
+<main id="conteudo" class="container doc">
+  <h1>Resultado do sorteio</h1>
+  <p id="loadError" class="alert err" hidden>Não foi possível carregar o resultado. Atualize a página.</p>
+  <p id="resultMsg" class="lead" role="status">Carregando…</p>
+  <div id="resultBox" class="card winner" hidden>
+    <span class="eyebrow">Ganhador(a)</span>
+    <p class="mask" id="winnerMask"></p>
+    <p>Inscrição nº <b id="winnerNum"></b></p>
+    <p class="note">Sorteio realizado em <span id="drawnAt"></span> entre <span id="eligible"></span> inscrições válidas. Por segurança, o nome é parcialmente ocultado; o ganhador é contatado pelo e-mail informado na inscrição.</p>
+  </div>
+</main>
+<footer><div class="container"><nav aria-label="Rodapé"><a href="/">Início</a><a href="/regras">Regras</a><a href="/privacidade">Política de Privacidade</a><a href="/resultado">Resultado</a></nav>
+<p>Este sorteio não é patrocinado, endossado ou administrado pela Apple Inc. iPhone é marca registrada da Apple Inc.</p></div></footer>
+<script type="module" src="/js/page.js"></script>
+</body></html>
